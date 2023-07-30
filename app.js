@@ -5,7 +5,10 @@ const logger = require('./logger')
 const countries = require('./countries.json')
 
 const app = express()
+
+//MIDDLEWARE
 app.use(cors())
+app.use(express.json())
 app.use(logger)
 
 
@@ -28,9 +31,14 @@ app.get('/countries/:id', (req, res) => {
     } else {
         res.send(country)
     }
-
-
-   
   }) 
+
+
+app.post('/countries', (req,res) => {
+    
+    const country = req.body
+    countries.push(country)
+    res.status(201).send(country)
+})
 
 module.exports = app
