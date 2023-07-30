@@ -1,7 +1,10 @@
 const express = require('express')
-const app = express()
+const logger = require('./logger')
 
 const countries = require('./countries.json')
+
+const app = express()
+app.use(logger)
 
 
 app.get('/', (req, res) => {
