@@ -21,6 +21,19 @@ app.get('/countries', (req, res) => {
     res.send(countries)
 })
 
+app.get('/countries/random', (req, res) => {
+
+    let randomCountries4 = []
+
+    for (let i = 0; i < 4; i++){
+    const randIdx = Math.floor(Math.random() * countries.length)
+    const randomCountries = (countries[randIdx])
+      randomCountries4.push(randomCountries)
+    }
+    
+    
+    res.send(randomCountries4);
+})
 
 
 app.get('/countries/:id', (req, res) => {
