@@ -21,6 +21,8 @@ app.get('/countries', (req, res) => {
     res.send(countries)
 })
 
+
+
 app.get('/countries/:id', (req, res) => {
     console.log(req.params)
     const idx = req.params.id
