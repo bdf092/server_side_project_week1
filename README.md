@@ -3,9 +3,7 @@
 An educational game, built to practise your Geography knowledge.
 
 # Installation & usage
-
 ## Installation 
-
 
 - Clone or download the repository.
 - Run cd server_side_project_week_1 in your terminal.
@@ -19,3 +17,6 @@ An educational game, built to practise your Geography knowledge.
 - Express
 - Cors 
 - Nodemon 
+- Rendit
+
+
