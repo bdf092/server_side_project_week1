@@ -19,4 +19,23 @@ An educational game, built to practise your Geography knowledge.
 - Nodemon 
 - Rendit
 
+# Process
+
+- Started creating index.js with the listening port
+- Double check dependencies installed and imported (cors, express, logger)
+- Added relevant endpoints in app.js
+- Added data in both json file
+
+# Wins & Challenges
+
+## Wins
+
+- Implemented different endpoints with 2 different json files
+
+## Challengues
+- Understanding what target data can be relevant for server side
+
+# Future Features
+- Check for homonyms in players.json to avoid duplicates
+
 
