@@ -53,7 +53,7 @@ app.get('/players', (req, res) => {
     res.send(players)
 })
 
-app.post('/countries', (req, res) => {
+app.post('/players', (req, res) => {
 
     const player = req.body
     players.push(player)
