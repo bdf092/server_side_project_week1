@@ -49,6 +49,9 @@ app.get('/countries/:id', (req, res) => {
     }
 })
 
+app.get('/players', (req, res) => {
+    res.send(players)
+})
 
 app.post('/countries', (req, res) => {
 
