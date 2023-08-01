@@ -3,6 +3,7 @@ const cors = require('cors')
 const logger = require('./logger')
 
 const countries = require('./countries.json')
+const players = require('./players.json')
 
 const app = express()
 
@@ -51,9 +52,9 @@ app.get('/countries/:id', (req, res) => {
 
 app.post('/countries', (req, res) => {
 
-    const country = req.body
-    countries.push(country)
-    res.status(201).send(country)
+    const player = req.body
+    players.push(player)
+    res.status(201).send(player)
 })
 
 module.exports = app
