@@ -24,16 +24,17 @@ app.get('/countries', (req, res) => {
 
 app.get('/countries/random', (req, res) => {
 
-    let randomCountries4 = []
+    let randomCountries = []
 
-    for (let i = 0; i < 4; i++){
-    const randIdx = Math.floor(Math.random() * countries.length)
-    const randomCountries = (countries[randIdx])
-      randomCountries4.push(randomCountries)
+    for (let i = 0; i < 4; i++) {
+        const randIdx = Math.floor(Math.random() * countries.length)
+        while (randomCountries.includes(countries[randIdx])) {
+            randIdx = Math.floor(Math.random() * countries.length)
+        }
+        randomCountries.push(countries[randIdx])
+
     }
-    
-    
-    res.send(randomCountries4);
+    res.send(randomCountries);
 })
 
 
